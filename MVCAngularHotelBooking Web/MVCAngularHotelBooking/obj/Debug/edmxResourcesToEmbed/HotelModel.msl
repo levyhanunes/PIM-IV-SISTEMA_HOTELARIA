@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="HotelDBModelStoreContainer" CdmEntityContainer="HotelDBEntities1">
+    <EntitySetMapping Name="HotelMaster">
+      <EntityTypeMapping TypeName="HotelDBModel.HotelMaster">
+        <MappingFragment StoreEntitySet="HotelMaster">
+          <ScalarProperty Name="RoomID" ColumnName="RoomID" />
+          <ScalarProperty Name="RoomNo" ColumnName="RoomNo" />
+          <ScalarProperty Name="RoomType" ColumnName="RoomType" />
+          <ScalarProperty Name="Prize" ColumnName="Prize" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RoomBooking">
+      <EntityTypeMapping TypeName="HotelDBModel.RoomBooking">
+        <MappingFragment StoreEntitySet="RoomBooking">
+          <ScalarProperty Name="BookingID" ColumnName="BookingID" />
+          <ScalarProperty Name="RoomID" ColumnName="RoomID" />
+          <ScalarProperty Name="BookedDateFR" ColumnName="BookedDateFR" />
+          <ScalarProperty Name="BookedDateTO" ColumnName="BookedDateTO" />
+          <ScalarProperty Name="BookingStatus" ColumnName="BookingStatus" />
+          <ScalarProperty Name="PaymentStatus" ColumnName="PaymentStatus" />
+          <ScalarProperty Name="AdvancePayed" ColumnName="AdvancePayed" />
+          <ScalarProperty Name="TotalAmountPayed" ColumnName="TotalAmountPayed" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="USP_Hotel_Insert" FunctionName="HotelDBModel.Store.USP_Hotel_Insert" />
+    <FunctionImportMapping FunctionImportName="USP_HotelMaster_Select" FunctionName="HotelDBModel.Store.USP_HotelMaster_Select">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="HotelDBModel.USP_HotelMaster_Select_Result">
+          <ScalarProperty Name="RoomID" ColumnName="RoomID" />
+          <ScalarProperty Name="RoomNo" ColumnName="RoomNo" />
+          <ScalarProperty Name="RoomType" ColumnName="RoomType" />
+          <ScalarProperty Name="Prize" ColumnName="Prize" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="USP_HotelStatus_Select" FunctionName="HotelDBModel.Store.USP_HotelStatus_Select">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="HotelDBModel.USP_HotelStatus_Select_Result">
+          <ScalarProperty Name="RoomNo" ColumnName="RoomNo" />
+          <ScalarProperty Name="BookedDateFR" ColumnName="BookedDateFR" />
+          <ScalarProperty Name="BookedDateTO" ColumnName="BookedDateTO" />
+          <ScalarProperty Name="BookingStatus" ColumnName="BookingStatus" />
+          <ScalarProperty Name="PaymentStatus" ColumnName="PaymentStatus" />
+          <ScalarProperty Name="AdvancePayed" ColumnName="AdvancePayed" />
+          <ScalarProperty Name="TotalAmountPayed" ColumnName="TotalAmountPayed" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="USP_RoomBooking_Delete" FunctionName="HotelDBModel.Store.USP_RoomBooking_Delete" />
+    <FunctionImportMapping FunctionImportName="USP_RoomBooking_Insert" FunctionName="HotelDBModel.Store.USP_RoomBooking_Insert" />
+    <FunctionImportMapping FunctionImportName="USP_RoomBooking_SelectALL" FunctionName="HotelDBModel.Store.USP_RoomBooking_SelectALL">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="HotelDBModel.USP_RoomBooking_SelectALL_Result">
+          <ScalarProperty Name="RoomNo" ColumnName="RoomNo" />
+          <ScalarProperty Name="BookingID" ColumnName="BookingID" />
+          <ScalarProperty Name="RoomID" ColumnName="RoomID" />
+          <ScalarProperty Name="BookedDateFR" ColumnName="BookedDateFR" />
+          <ScalarProperty Name="BookedDateTO" ColumnName="BookedDateTO" />
+          <ScalarProperty Name="BookingStatus" ColumnName="BookingStatus" />
+          <ScalarProperty Name="PaymentStatus" ColumnName="PaymentStatus" />
+          <ScalarProperty Name="AdvancePayed" ColumnName="AdvancePayed" />
+          <ScalarProperty Name="TotalAmountPayed" ColumnName="TotalAmountPayed" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>

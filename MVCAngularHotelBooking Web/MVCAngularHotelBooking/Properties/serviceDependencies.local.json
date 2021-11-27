@@ -1,0 +1,13 @@
+{
+  "dependencies": {
+    "secrets1": {
+      "type": "secrets.user"
+    },
+    "mssql1": {
+      "resourceId": null,
+      "type": "mssql.local",
+      "connectionId": "Server=(localhost):mssqllocaldb;Database=HotelDB;Trusted_Connection=True;MultipleActiveResultSets=true",
+      "secretStore": "LocalSecretsFile"
+    }
+  }
+}
